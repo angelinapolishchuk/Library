@@ -37,8 +37,8 @@ public class Main {
         }
 
         OthersDAO othersDAO = new OthersDAOImpl();
-        for (Libraries library: librariesDAO.getAllLibraries()) {
-            LOGGER.info("Library: [Id : " + library.getLibraryId() + ", LibraryName : " + library.getLibraryName() + " ]");
+        for (Others other: othersDAO.getAllOthers()) {
+            LOGGER.info("Others: [Id : " + other.getOtherId() + ", OtherTitle : " + other.getOtherTitle() + " ]");
         }
 
         PublishingHousesDAO publishingHousesDAO = new PublishingHousesDAOImpl();
