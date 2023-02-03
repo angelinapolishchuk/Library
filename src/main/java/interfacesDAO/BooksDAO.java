@@ -1,12 +1,9 @@
-package src.main.java.interfacesDAO;
+package interfacesDAO;
 
-import src.main.java.Hierarcy.Books;
+import Hierarcy.Books;
 
-import java.util.List;
 
-public interface BooksDAO {
-    public List<Books> getAllBooks();
-    public Books getBooks(int BookId);
-    public void updateBooks(Books books);
-    public void deleteBooks(Books books);
+public interface BooksDAO extends IBaseDAO<Books> {
+
+
 }

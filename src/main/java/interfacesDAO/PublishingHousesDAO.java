@@ -1,12 +1,8 @@
-package src.main.java.interfacesDAO;
+package interfacesDAO;
 
-import src.main.java.Hierarcy.PublishingHouses;
 
-import java.util.List;
+import Hierarcy.PublishingHouses;
 
-public interface PublishingHousesDAO {
-    public List<PublishingHouses> getAllPublishingHouses();
-    public PublishingHouses getPublishingHouses(int PublishingHouseId);
-    public void updatePublishingHouses(PublishingHouses publishingHouses);
-    public void deletePublishingHouses(PublishingHouses publishingHouses);
+public interface PublishingHousesDAO extends IBaseDAO<PublishingHouses> {
+
 }

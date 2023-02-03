@@ -1,12 +1,7 @@
-package src.main.java.interfacesDAO;
+package interfacesDAO;
 
-import src.main.java.Hierarcy.Storages;
+import Hierarcy.Storages;
 
-import java.util.List;
+public interface StoragesDAO extends IBaseDAO<Storages>{
 
-public interface StoragesDAO {
-    public List<Storages> getAllStorages();
-    public Storages getStorages(int StorageId);
-    public void updateStorages(Storages storages);
-    public void deleteStorages(Storages storages);
 }

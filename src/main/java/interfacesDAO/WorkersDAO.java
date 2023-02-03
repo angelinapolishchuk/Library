@@ -1,12 +1,8 @@
-package src.main.java.interfacesDAO;
+package interfacesDAO;
 
-import src.main.java.Hierarcy.Workers;
 
-import java.util.List;
+import Hierarcy.Workers;
 
-public interface WorkersDAO {
-    public List<Workers> getAllWorkers();
-    public Workers getWorkers(int WorkerId);
-    public void updateWorkers(Workers workers);
-    public void deleteWorkers(Workers workers);
+public interface WorkersDAO extends IBaseDAO<Workers> {
+
 }

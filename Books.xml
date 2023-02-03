@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Books BookId="1" bookPages="453" LibraryId="1">
+    <BookTitle>Harry Potter</BookTitle>
+    <BookAuthor>Rowling</BookAuthor>
+    <bookAuthor>Rowling</bookAuthor>
+    <bookId>1</bookId>
+    <bookPages>453</bookPages>
+    <bookTitle>Harry Potter</bookTitle>
+    <libraryId>1</libraryId>
+</Books>

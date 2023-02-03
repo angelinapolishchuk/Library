@@ -1,12 +1,8 @@
-package src.main.java.interfacesDAO;
+package interfacesDAO;
 
-import src.main.java.Hierarcy.Others;
 
-import java.util.List;
+import Hierarcy.Others;
 
-public interface OthersDAO {
-    public List<Others> getAllOthers();
-    public Others getOthers(int OtherId);
-    public void updateOthers(Others others);
-    public void deleteOthers(Others others);
+public interface OthersDAO extends IBaseDAO<Others> {
+
 }

@@ -1,8 +1,11 @@
-package src.main.java.DAO;
+package DAO;
 
-import src.main.java.Hierarcy.BookCrossing;
-import src.main.java.interfacesDAO.BookCrossingDAO;
+import ConnectionPool.ConnectionPool;
+import Hierarcy.BookCrossing;
+import interfacesDAO.BookCrossingDAO;
 
+
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -10,35 +13,72 @@ import java.util.logging.Logger;
 public class BookCrossingDAOImpl implements BookCrossingDAO {
 
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(BookCrossingDAOImpl.class));
-    List< BookCrossing>  bookCrossings;
+    public static final String ALLBookCrossing = "SELECT * FROM BookCrossing";
+    public static final String UPDATE = "UPDATE BookCrossing SET OwnerName = ? WHERE BookCrossingId = ?";
+    public static final String DELETE = "DELETE FROM BookCrossing WHERE BookCrossingId = ?";
+    public static final String CREATE = "INSERT INTO BookCrossing (BookCrossingId, OwnerName, LibraryId) " +
+            "VALUES (?, ?, ?, ?, ?)";
 
-    public BookCrossingDAOImpl(){
-        bookCrossings = new ArrayList< BookCrossing>();
-        BookCrossing bookCrossing1 = new  BookCrossing(1,"Robert", 1);
-        BookCrossing bookCrossing2 = new  BookCrossing(2,"John", 1);
-        bookCrossings.add(bookCrossing1);
-        bookCrossings.add(bookCrossing2);
+    @Override
+    public List<BookCrossing> getAll() {
+        List<BookCrossing> bookCrossing = new ArrayList<>();
+        try (Connection connection = ConnectionPool.getConnection();
+             Statement stmt = connection.createStatement()) {
+            ResultSet resultSet = stmt.executeQuery(ALLBookCrossing);
+            while (resultSet.next()) {
+                int BookCrossingId = resultSet.getInt(1);
+                String OwnerName = resultSet.getString(2);
+                int LibraryId = resultSet.getInt(3);
+
+                bookCrossing.add(new BookCrossing(BookCrossingId, OwnerName, LibraryId));
+            }
+            LOGGER.info("BookCrossing" + bookCrossing);
+        } catch (SQLException e) {
+            LOGGER.info(e.getMessage());
+        }
+        return bookCrossing;
     }
 
     @Override
-    public List<BookCrossing> getAllBookCrossing() {
-        return bookCrossings;
+    public boolean update(BookCrossing entity) {
+        try (Connection connection = ConnectionPool.getConnection()) {
+            PreparedStatement ps = connection.prepareStatement(UPDATE);
+            ps.setInt(1, entity.getBookCrossingId());
+            ps.setString(2, entity.getOwnerName());
+            ps.setInt(3, entity.getLibraryId());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            LOGGER.info(e.getMessage());
+        }
+        return true;
     }
 
     @Override
-    public BookCrossing getBookCrossing(int BookCrossingId) {
-        return bookCrossings.get(BookCrossingId);
+    public boolean delete(long id) {
+        try (Connection connection = ConnectionPool.getConnection()) {
+            Statement ps = connection.createStatement();
+            String del = "DELETE FROM BookCrossing WHERE BookCrossingId = " + id;
+            ps.executeUpdate(del);
+        } catch (SQLException e) {
+            LOGGER.info(e.getMessage());
+        }
+        return false;
     }
 
     @Override
-    public void updateBookCrossing(BookCrossing bookCrossing) {
-        bookCrossings.get(bookCrossing.getBookCrossingId()).setOwnerName(bookCrossing.getOwnerName());
-        LOGGER.info("BookCrossing: BookCrossingId  " + bookCrossing.getBookCrossingId() + ", updated in the database");
+    public boolean create(BookCrossing entity) {
+        try (Connection connection = ConnectionPool.getConnection()) {
+            PreparedStatement ps = connection.prepareStatement(CREATE);
+            ps.setInt(1, entity.getBookCrossingId());
+            ps.setString(2, entity.getOwnerName());
+            ps.setInt(3, entity.getLibraryId());
+            ps.executeUpdate();
+            ps.close();
+        } catch (SQLException e) {
+            LOGGER.info(e.getMessage());
+        }
+        return true;
     }
 
-    @Override
-    public void deleteBookCrossing(BookCrossing bookCrossing) {
-        bookCrossings.remove(bookCrossing.getBookCrossingId());
-        LOGGER.info("BookCrossing: BookCrossingId " + bookCrossing.getBookCrossingId() + ", deleted from database");
-    }
-    }
+
+}

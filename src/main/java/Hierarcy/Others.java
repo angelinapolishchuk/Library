@@ -1,4 +1,7 @@
-package src.main.java.Hierarcy;
+package Hierarcy;
+
+import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class Others {
         private int OtherId;
@@ -6,6 +9,8 @@ public class Others {
         private  String OtherTitle;
         private String OtherAuthor;
         private int LibraryId;
+
+        public Others(){};
 
         public Others(int OtherId, String OtherType, String OtherTitle, String OtherAuthor, int LibraryId){
             this.OtherId = OtherId;
@@ -51,5 +56,30 @@ public class Others {
         public void setLibraryId(int libraryId) {
             this.LibraryId = libraryId;
         }
+
+    public static Others Factory(Scanner scanner, Logger LOGGER){
+        LOGGER.info("Enter other Id");
+        int OtherId = scanner.nextInt();
+        LOGGER.info("Enter type");
+        String OtherType = scanner.next();
+        LOGGER.info("Enter title");
+        String OtherTitle = scanner.next();
+        LOGGER.info("Enter author");
+        String OtherAuthor = scanner.next();
+        LOGGER.info("Enter libraryId");
+        int LibraryId = scanner.nextInt();
+        return new Others(OtherId, OtherType, OtherTitle, OtherAuthor, LibraryId);
+
+    }
+    @Override
+    public String toString() {
+        return " Others {" +
+                ", OtherId = " + OtherId +
+                ", OtherType = " + OtherType +
+                ", OtherTitle = " + OtherTitle +
+                ", OtherAuthor = " + OtherAuthor +
+                ", LibraryId = " + LibraryId +
+                '}';
+    }
     }
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Cards xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="Cards.xsd">
+    <Card CardId = "1">
+        <AcceptanceDate>2022-02-03</AcceptanceDate>
+        <ReturnDate>2022-03-03</ReturnDate>
+        <LibraryId>1</LibraryId>
+    </Card>
+    <Card CardId = "2">
+        <AcceptanceDate>2022-02-03</AcceptanceDate>
+        <ReturnDate>2022-03-03</ReturnDate>
+        <LibraryId>2</LibraryId>
+    </Card>
+</Cards>

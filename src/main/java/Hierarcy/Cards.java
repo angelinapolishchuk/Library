@@ -1,4 +1,4 @@
-package src.main.java.Hierarcy;
+package Hierarcy;
 
 
 public class Cards {
@@ -7,6 +7,7 @@ public class Cards {
     private  String ReturnDate;
     private int LibraryId;
 
+    public Cards (){};
    public Cards(int CardId, String AcceptanceDate, String ReturnDate, int LibraryId){
         this.CardId = CardId;
         this.AcceptanceDate = AcceptanceDate;
@@ -44,5 +45,15 @@ public class Cards {
 
     public void setLibraryId(int libraryId) {
         this.LibraryId = libraryId;
+    }
+
+    @Override
+    public String toString() {
+        return " Cards {" +
+                ", CardId = " + CardId +
+                ", AcceptanceDate = " + AcceptanceDate +
+                ", ReturnDate = " + ReturnDate +
+                ", LibraryId = " + LibraryId +
+                '}';
     }
 }

@@ -1,8 +1,11 @@
-package src.main.java.DAO;
+package DAO;
 
-import src.main.java.Hierarcy.Storages;
-import src.main.java.interfacesDAO.StoragesDAO;
+import ConnectionPool.ConnectionPool;
+import Hierarcy.Others;
+import Hierarcy.Storages;
+import interfacesDAO.StoragesDAO;
 
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -10,34 +13,72 @@ import java.util.logging.Logger;
 public class StoragesDAOImpl implements StoragesDAO {
 
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(StoragesDAOImpl.class));
-    List<Storages> storages;
+    public static final String AllStorages = "SELECT * FROM Storages";
+    public static final String UPDATE = "UPDATE Storages SET StorageType = ? WHERE StorageId = ?";
+    public static final String DELETE = "DELETE FROM Storages WHERE StorageId = ?";
+    public static final String CREATE = "INSERT INTO Storages (StorageId, StorageType, LibraryId) " +
+            "VALUES (?, ?, ?, ?, ?)";
 
-    public StoragesDAOImpl(){
-        storages = new ArrayList<Storages>();
-        Storages storages1= new Storages(1,"For disposal", 2);
-        Storages storages2 = new Storages(2, "For exhibition", 1);
-        storages.add(storages1);
-        storages.add(storages2);
-    }
     @Override
-    public List<Storages> getAllStorages() {
+    public List<Storages> getAll() {
+        List<Storages> storages = new ArrayList<>();
+        try (Connection connection = ConnectionPool.getConnection();
+             Statement stmt = connection.createStatement()) {
+            ResultSet resultSet = stmt.executeQuery(AllStorages);
+            while (resultSet.next()) {
+                int StorageId = resultSet.getInt(1);
+                String StorageType = resultSet.getString(2);
+                int LibraryId = resultSet.getInt(3);
+
+                storages.add(new Storages(StorageId, StorageType, LibraryId));
+            }
+            LOGGER.info("Storages" + storages);
+        } catch (SQLException e) {
+            LOGGER.info(e.getMessage());
+        }
         return storages;
     }
 
     @Override
-    public Storages getStorages(int StorageId) {
-        return storages.get(StorageId);
+    public boolean update(Storages entity) {
+        try (Connection connection = ConnectionPool.getConnection()) {
+            PreparedStatement ps = connection.prepareStatement(UPDATE);
+            ps.setInt(1, entity.getStorageId());
+            ps.setString(2, entity.getStorageType());
+            ps.setInt(3, entity.getLibraryId());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            LOGGER.info(e.getMessage());
+        }
+        return true;
     }
 
     @Override
-    public void updateStorages(Storages storage) {
-        storages.get(storage.getStorageId()).setStorageType(storage.getStorageType());
-        LOGGER.info("Storages: StorageId  " + storage.getStorageId() + ", updated in the database");
+    public boolean delete(long id) {
+        try (Connection connection = ConnectionPool.getConnection()) {
+            Statement ps = connection.createStatement();
+            String del = "DELETE FROM Storages WHERE StorageId = " + id;
+            ps.executeUpdate(del);
+        } catch (SQLException e) {
+            LOGGER.info(e.getMessage());
+        }
+        return false;
     }
 
     @Override
-    public void deleteStorages(Storages storage) {
-        storages.remove(storage.getStorageId());
-        LOGGER.info("Storages: StorageId  " + storage.getStorageId() + ", deleted from database");
+    public boolean create(Storages entity) {
+        try (Connection connection = ConnectionPool.getConnection()) {
+            PreparedStatement ps = connection.prepareStatement(CREATE);
+            ps.setInt(1, entity.getStorageId());
+            ps.setString(2, entity.getStorageType());
+            ps.setInt(3, entity.getLibraryId());
+            ps.executeUpdate();
+            ps.close();
+        } catch (SQLException e) {
+            LOGGER.info(e.getMessage());
+        }
+        return true;
     }
+
+
 }

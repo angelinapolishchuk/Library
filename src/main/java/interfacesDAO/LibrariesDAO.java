@@ -1,12 +1,8 @@
-package src.main.java.interfacesDAO;
+package interfacesDAO;
 
-import src.main.java.Hierarcy.Libraries;
 
-import java.util.List;
+import Hierarcy.Libraries;
 
-public interface LibrariesDAO {
-    public List<Libraries> getAllLibraries();
-    public Libraries getLibraries(int LibraryId);
-    public void updateLibraries(Libraries libraries);
-    public void deleteLibraries(Libraries libraries);
+public interface LibrariesDAO extends IBaseDAO<Libraries> {
+
 }

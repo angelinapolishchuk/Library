@@ -1,4 +1,4 @@
-package src.main.java.Hierarcy;
+package Hierarcy;
 
 public class Genres {
     private int  GenreId;

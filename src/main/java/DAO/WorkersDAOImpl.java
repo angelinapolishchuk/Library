@@ -1,8 +1,11 @@
-package src.main.java.DAO;
+package DAO;
 
-import src.main.java.Hierarcy.Workers;
-import src.main.java.interfacesDAO.WorkersDAO;
+import ConnectionPool.ConnectionPool;
+import Hierarcy.Visitors;
+import Hierarcy.Workers;
+import interfacesDAO.WorkersDAO;
 
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -10,34 +13,78 @@ import java.util.logging.Logger;
 public class WorkersDAOImpl implements WorkersDAO {
 
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(WorkersDAOImpl.class));
-    List<Workers> workers;
+    public static final String AllWorkers = "SELECT * FROM Workers";
+    public static final String UPDATE = "UPDATE Workers SET WorkersName = ? WHERE WorkerId = ?";
+    public static final String DELETE = "DELETE FROM Workers WHERE WorkerId = ?";
+    public static final String CREATE = "INSERT INTO Workers (WorkerId, WorkerName, WorkerAge, Position, LibraryId) " +
+            "VALUES (?, ?, ?, ?, ?)";
 
-    public WorkersDAOImpl(){
-        workers = new ArrayList<Workers>();
-        Workers workers1= new Workers(1,"Jane", 23, "librarian",1);
-        Workers workers2 = new Workers(2, "Lin", 46,"librarian",2);
-        workers.add(workers1);
-        workers.add(workers2);
-    }
     @Override
-    public List<Workers> getAllWorkers() {
+    public List<Workers> getAll() {
+        List<Workers> workers = new ArrayList<>();
+        try (Connection connection = ConnectionPool.getConnection();
+             Statement stmt = connection.createStatement()) {
+            ResultSet resultSet = stmt.executeQuery(AllWorkers);
+            while (resultSet.next()) {
+                int WorkerId = resultSet.getInt(1);
+                String WorkerName = resultSet.getString(2);
+                int WorkerAge = resultSet.getInt(3);
+                String Position = resultSet.getString(4);
+                int LibraryId = resultSet.getInt(5);
+
+                workers.add(new Workers(WorkerId, WorkerName, WorkerAge, Position, LibraryId));
+            }
+            LOGGER.info("Workers" + workers);
+        } catch (SQLException e) {
+            LOGGER.info(e.getMessage());
+        }
         return workers;
     }
 
     @Override
-    public Workers getWorkers(int WorkerId) {
-        return workers.get(WorkerId);
+    public boolean update(Workers entity) {
+        try (Connection connection = ConnectionPool.getConnection()) {
+            PreparedStatement ps = connection.prepareStatement(UPDATE);
+            ps.setInt(1, entity.getWorkerId());
+            ps.setString(2, entity.getWorkerName());
+            ps.setInt(3, entity.getWorkerAge());
+            ps.setString(4, entity.getPosition());
+            ps.setInt(5, entity.getLibraryId());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            LOGGER.info(e.getMessage());
+        }
+        return true;
     }
 
     @Override
-    public void updateWorkers(Workers worker) {
-        workers.get(worker.getWorkerId()).setWorkerName(worker.getWorkerName());
-        LOGGER.info("Workers: WorkerId  " + worker.getWorkerId() + ", updated in the database");
+    public boolean delete(long id) {
+        try (Connection connection = ConnectionPool.getConnection()) {
+            Statement ps = connection.createStatement();
+            String del = "DELETE FROM Workers WHERE WorkerId = " + id;
+            ps.executeUpdate(del);
+        } catch (SQLException e) {
+            LOGGER.info(e.getMessage());
+        }
+        return false;
     }
 
     @Override
-    public void deleteWorkers(Workers worker) {
-        workers.remove(worker.getWorkerId());
-        LOGGER.info("Workers: WorkerId  " + worker.getWorkerId() + ", deleted from database");
+    public boolean create(Workers entity) {
+        try (Connection connection = ConnectionPool.getConnection()) {
+            PreparedStatement ps = connection.prepareStatement(CREATE);
+            ps.setInt(1, entity.getWorkerId());
+            ps.setString(2, entity.getWorkerName());
+            ps.setInt(3, entity.getWorkerAge());
+            ps.setString(4, entity.getPosition());
+            ps.setInt(5, entity.getLibraryId());
+            ps.executeUpdate();
+            ps.close();
+        } catch (SQLException e) {
+            LOGGER.info(e.getMessage());
+        }
+        return true;
     }
+
+
 }

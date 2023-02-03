@@ -1,5 +1,8 @@
-package src.main.java.Hierarcy;
+package Hierarcy;
 
+import org.codehaus.jackson.map.annotate.JsonRootName;
+
+@JsonRootName(value = "Workers")
 public class Workers {
     private int WorkerId;
     private String WorkerName;

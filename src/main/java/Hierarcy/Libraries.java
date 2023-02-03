@@ -1,5 +1,8 @@
-package src.main.java.Hierarcy;
+package Hierarcy;
 
+import org.codehaus.jackson.map.annotate.JsonRootName;
+
+@JsonRootName(value = "Libraries")
 public class Libraries {
     private int LibraryId;
     private String LibraryName;
@@ -7,6 +10,10 @@ public class Libraries {
     public Libraries(String LibraryName, int LibraryId){
         this.LibraryName = LibraryName;
         this.LibraryId = LibraryId;
+    }
+
+    public Libraries() {
+
     }
 
     public String getLibraryName() {

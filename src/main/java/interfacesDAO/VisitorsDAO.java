@@ -1,12 +1,8 @@
-package src.main.java.interfacesDAO;
+package interfacesDAO;
 
-import src.main.java.Hierarcy.Visitors;
 
-import java.util.List;
+import Hierarcy.Visitors;
 
-public interface VisitorsDAO {
-    public List<Visitors> getAllVisitors();
-    public Visitors getVisitors(int VisitorId);
-    public void updateVisitors(Visitors visitors);
-    public void deleteVisitors(Visitors visitors);
+public interface VisitorsDAO extends IBaseDAO<Visitors> {
+
 }
