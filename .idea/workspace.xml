@@ -5,128 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6114c291-279b-4be6-8ff9-b5c410fd5502" name="Changes" comment="New classes">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_xml_databind_0_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_dbcp2_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Books.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Books.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cards.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cards.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Libraries.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Workers.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ConnectionPool/ConnectionDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ConnectionPool/ConnectionPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Menu/AllDAOClasses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Menu/AllOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Patterns/Builder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Patterns/Librarian.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Xml/Dom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Xml/Jaxb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Xml/Json.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Xml/MyBatis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Xml/Sax.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interfacesDAO/IBaseDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/CardsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/MyBatisConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Library.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/.idea/Library.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/DAO/BookCrossingDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/DAO/BooksDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/DAO/CardsDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/DAO/GenresDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/DAO/LibrariesDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/DAO/OthersDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/DAO/PublishingHousesDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/DAO/StoragesDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/DAO/VisitorsDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/DAO/WorkersDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/Hierarcy/BookCrossing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/Hierarcy/Books.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/Hierarcy/Cards.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/Hierarcy/Genres.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/Hierarcy/Libraries.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/Hierarcy/Others.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/Hierarcy/PublishingHouses.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/Hierarcy/Storages.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/Hierarcy/Visitors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/Hierarcy/Workers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/interfacesDAO/BookCrossingDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/interfacesDAO/BooksDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/interfacesDAO/CardsDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/interfacesDAO/GenresDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/interfacesDAO/LibrariesDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/interfacesDAO/OthersDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/interfacesDAO/PublishingHousesDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/interfacesDAO/StoragesDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/interfacesDAO/VisitorsDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/src/main/java/interfacesDAO/WorkersDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/BookCrossingDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/BookCrossingDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/BooksDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/BooksDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/CardsDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/CardsDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/GenresDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/GenresDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/LibrariesDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/LibrariesDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/OthersDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/OthersDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/PublishingHousesDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/PublishingHousesDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/StoragesDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/StoragesDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/VisitorsDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/VisitorsDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/WorkersDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/WorkersDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hierarcy/BookCrossing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hierarcy/BookCrossing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hierarcy/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hierarcy/Books.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hierarcy/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hierarcy/Cards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hierarcy/Genres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hierarcy/Genres.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hierarcy/Libraries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hierarcy/Libraries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hierarcy/Others.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hierarcy/Others.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hierarcy/PublishingHouses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hierarcy/PublishingHouses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hierarcy/Storages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hierarcy/Storages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hierarcy/Visitors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hierarcy/Visitors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hierarcy/Workers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hierarcy/Workers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfacesDAO/BookCrossingDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfacesDAO/BookCrossingDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfacesDAO/BooksDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfacesDAO/BooksDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfacesDAO/CardsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfacesDAO/CardsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfacesDAO/GenresDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfacesDAO/GenresDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfacesDAO/LibrariesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfacesDAO/LibrariesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfacesDAO/OthersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfacesDAO/OthersDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfacesDAO/PublishingHousesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfacesDAO/PublishingHousesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfacesDAO/StoragesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfacesDAO/StoragesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfacesDAO/VisitorsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfacesDAO/VisitorsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfacesDAO/WorkersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfacesDAO/WorkersDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675436188799</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="New classes">
+      <created>1678984603997</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678984603997</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

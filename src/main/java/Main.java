@@ -20,20 +20,20 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int a;
-      boolean exit = false;
+        boolean exit = false;
 
         while (!exit) {
             switch (currentState) {
-               case ALL -> {
-                   LOGGER.info("\n1 - INSERT\n2 - UPDATE\n3 - DELETE\n4 - PRINT\n0 - EXIT");
+                case ALL -> {
+                    LOGGER.info("\n1 - INSERT\n2 - UPDATE\n3 - DELETE\n4 - PRINT\n0 - EXIT");
                     boolean validInt = false;
-                   a = 0;
+                    a = 0;
                     a = scanner.nextInt();
                     if (a < 0 || a > 4) {
-                        LOGGER.info("YOU ENTER WRONG NUMBER. TRY IT AGAIN");
+                        LOGGER.info("Wrong number.Try again");
                         currentState = AllOptions.ALL;
                     }
-                               switch (a) {
+                    switch (a) {
                         case 1 -> currentState = AllOptions.INSERT;
                         case 2 -> currentState = AllOptions.UPDATE;
                         case 3 -> currentState = AllOptions.DELETE;
@@ -88,11 +88,11 @@ public class Main {
                     }
                 }
                 case EXIT -> {
-                    LOGGER.info("\nDO YOU WANT TO EXIT?\nIF YES ENTER 'Y'; IF NO ENTER 'N':");
+                    LOGGER.info("\nAre you sure?\nIf 'yes' enter 'Y'; If 'no' enter 'N':");
                     char ch = Character.toLowerCase(scanner.next().trim().charAt(0));
                     switch (ch) {
                         case 'y' -> {
-                            LOGGER.info("THANKS, GOOD DAY AND GOODBYE");
+                            LOGGER.info("Goodbye");
                             exit = true;
                         }
                         case 'n' -> {
@@ -100,7 +100,7 @@ public class Main {
                         }
                     }
                 }
-                default -> throw new RuntimeException("YOU ENTERED THE WRONG NUMBER");
+                default -> throw new RuntimeException("Wrong number");
             }
         }
         scanner.close();
@@ -112,7 +112,7 @@ public class Main {
         int a = 0;
         a = scanner.nextInt();
         if (a < 0 || a > 4) {
-            LOGGER.info("YOU ENTER WRONG NUMBER. TRY IT AGAIN");
+            LOGGER.info("Wrong number.Try again");
             currentState = AllOptions.ALL;
         }
 
